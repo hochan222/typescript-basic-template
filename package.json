@@ -9,6 +9,7 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
     "babel-loader": "^8.2.2",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -38,7 +39,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
-      "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\""
+      "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\" --ignore-path .gitignore --max-warnings 0"
     ]
   }
 }
