@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // 템플릿 위치
+      template: './public/index.html', // 템플릿 위치
     }),
   ],
   devServer: {
