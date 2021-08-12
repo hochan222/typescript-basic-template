@@ -1,5 +1,5 @@
 const button = document.getElementById('button');
 
 button?.addEventListener('click', () => {
-  alert('clicked!');
+  button.innerText = 'holee-button';
 });
