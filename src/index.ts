@@ -196,3 +196,62 @@
 //   const defaultModelID = 23;
 //   return { type: 'keyboard', modelID: defaultModelID };
 // };
+
+/*
+ ** "noUnusedParameters": true,
+ */
+
+// function fn(x: string) {
+//   return parseInt(x, 10);
+// }
+
+// const n1 = fn.call(undefined, '10');
+
+// // Argument of type 'boolean' is not assignable to parameter of type 'string'.ts(2345)
+// const n2 = fn.call(undefined, false);
+
+/*
+ ** "strictFunctionTypes": true,
+ */
+
+// let foo: Array<string> = [];
+// let bar: Array<string | number> = [];
+
+// bar = foo;
+// // Type '(string | number)[]' is not assignable to type 'string[]'.
+// //   Type 'string | number' is not assignable to type 'string'.
+// //     Type 'number' is not assignable to type 'string'.ts(2322)
+// foo = bar;
+
+/*
+ ** "strictFunctionTypes": true,
+ */
+
+// declare const loggedInUsername: string;
+
+// const users = [
+//   { name: 'Oby', age: 12 },
+//   { name: 'Heera', age: 32 },
+// ];
+
+// const loggedInUser = users.find((u) => u.name === loggedInUsername);
+// // Object is possibly 'undefined'.ts(2532)
+// console.log(loggedInUser.age);
+
+/*
+ ** "strictPropertyInitialization": true,
+ */
+
+// class UserAccount {
+//   name: string;
+//   accountType = 'user';
+
+//   //   Property 'email' has no initializer and is not definitely assigned in the constructor.ts(2564)
+//   email: string;
+//   address: string | undefined;
+
+//   constructor(name: string) {
+//     this.name = name;
+//     // Note that this.email is not set
+//   }
+// }
