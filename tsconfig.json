@@ -3,7 +3,7 @@
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    // "exactOptionalPropertyTypes": true,
+    // "exactOptionalPropertyTypes": true, /* after typescript 4.4v */
 
     /* Basic Options */
     // "incremental": true,                         /* Enable incremental compilation */
