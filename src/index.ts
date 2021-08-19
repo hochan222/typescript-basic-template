@@ -103,5 +103,96 @@
 // const number = 023;
 
 /*
- ** "noImplicitAny": true,
+ ** "noImplicitThis": true,
  */
+
+// class Rectangle {
+//   width: number;
+//   height: number;
+
+//   constructor(width: number, height: number) {
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   getAreaFunction() {
+//     return function () {
+//       //   'this' implicitly has type 'any' because it does not have a type annotation.ts(2683)
+//       return this.width * this.height;
+//     };
+//   }
+// }
+
+/*
+ ** "noPropertyAccessFromIndexSignature": true,
+ */
+
+// interface GameSettings {
+//   // Known up-front properties
+//   speed: 'fast' | 'medium' | 'slow';
+//   quality: 'high' | 'low';
+
+//   // Assume anything unknown to the interface
+//   // is a string.
+//   [key: string]: string;
+// }
+
+// const getSettings = (): GameSettings => {
+//   return {
+//     speed: 'fast',
+//     quality: 'high',
+//   };
+// };
+
+// const settings = getSettings();
+
+// settings.speed; // 의도함
+// settings.quality; // 의도함
+// // Property 'user' comes from an index signature, so it must be accessed with ['user'].ts(4111)
+// settings.user; // 의도한건가..?
+
+// settings['user'];
+
+/*
+ ** "noUncheckedIndexedAccess": true,
+ */
+
+// interface EnvironmentVars {
+//   NAME: string;
+//   OS: string;
+
+//   // Unknown properties are covered by this index signature.
+//   [propName: string]: string;
+// }
+
+// declare const env: EnvironmentVars;
+
+// // Declared as existing
+// const sysName = env.NAME;
+// const os = env.OS;
+
+// const os: string;
+
+// // Not declared, but because of the index
+// // signature, then it is considered a string
+// // nodeEnv = string | undefined
+// const nodeEnv = env.NODE_ENV;
+
+/*
+ ** "noUnusedLocals": true,
+ */
+
+// const foo = () => {
+//   // 'bar' is declared but its value is never read.ts(6133)
+//   const bar = 42;
+// };
+
+/*
+ ** "noUnusedParameters": true,
+ */
+
+// //  'modelID' is declared but its value is never read.ts(6133)
+// const createDefaultKeyboard = (modelID: number) => {
+//   const defaultModelID = 23;
+//   return { type: 'keyboard', modelID: defaultModelID };
+// };
