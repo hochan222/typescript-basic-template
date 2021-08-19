@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
 
     /* Basic Options */
     // "incremental": true,                         /* Enable incremental compilation */
