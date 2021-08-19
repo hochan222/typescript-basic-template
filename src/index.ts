@@ -4,9 +4,9 @@ button?.addEventListener('click', () => {
   button.innerText = 'holee-button';
 });
 
-/* 
-** "allowUnreachableCode": false,
-*/
+/*
+ ** "allowUnreachableCode": false,
+ */
 
 // function fn(n: number) {
 //   if (n > 5) {
@@ -17,9 +17,9 @@ button?.addEventListener('click', () => {
 //   return true;
 // }
 
-/* 
-** "allowUnusedLabels": false,
-*/
+/*
+ ** "allowUnusedLabels": false,
+ */
 
 // function verifyAge(age: number) {
 //   // Forgot 'return' statement
@@ -28,9 +28,9 @@ button?.addEventListener('click', () => {
 //   }
 // }
 
-/* 
-** "exactOptionalPropertyTypes": true,
-*/
+/*
+ ** "exactOptionalPropertyTypes": true,
+ */
 
 // interface UserDefaults {
 //   color?: "dark" | "light";
@@ -39,3 +39,20 @@ button?.addEventListener('click', () => {
 // const user: UserDefaults = {
 //   color: undefined, // dark | light | undefined
 // };
+
+/*
+ ** "noFallthroughCasesInSwitch": true,
+ */
+
+// const fallthrough = 6;
+
+// switch (fallthrough) {
+//   case 1:
+//     // Fallthrough case in switch.ts(7029)
+//     console.log(1);
+//   case 2:
+//     console.log(2);
+//     break;
+//   default:
+//     break;
+// }
