@@ -1,8 +1,8 @@
-// const button = document.getElementById('button');
+const button = document.getElementById('button');
 
-// button?.addEventListener('click', () => {
-//   button.innerText = 'holee-button';
-// });
+button?.addEventListener('click', () => {
+  button.innerText = 'holee-button';
+});
 
 /*
  ** "allowUnreachableCode": false,
